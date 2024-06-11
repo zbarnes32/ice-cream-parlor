@@ -1,6 +1,7 @@
 .top-bar {
     text-align: center;
     background-color: rgb(174, 237, 216);
+    padding: 1em;
 }
 
 .flavors {
