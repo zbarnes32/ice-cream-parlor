@@ -1,0 +1,23 @@
+.flavors {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.toppings {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.vessels {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.top-image {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    padding: .25em;
+    border-radius: 1em;
+}
+
