@@ -83,6 +83,7 @@ function addToOrderByName(itemName) {
 
 function drawOrder(){
     const checkoutElem = document.getElementById('checkout');
+    const checkoutTotalElem = document.getElementById('checkout-total');
     let checkoutContent = ''
     for (let i = 0; i < menu.length; i++){
         if (menu[i].quantity > 0) {
@@ -90,6 +91,17 @@ function drawOrder(){
         }
         // console.log(checkoutContent);
         checkoutElem.innerHTML = checkoutContent;
+        const checkoutTotal = getCheckoutTotal();
+        checkoutTotalElem.innerText = `$${checkoutTotal.toFixed(2)}`;
 
     }
+}
+
+function getCheckoutTotal(){
+    let total = 0;
+    for (let i = 0; i < menu.length; i++){
+        total += menu[i].price * menu[i].quantity;
+    }
+    console.log(total);
+    return total;
 }
